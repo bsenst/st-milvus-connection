@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "example_package_st_milvus_connection"
+version = "0.0.1"
+authors = [
+  { name="bsenst", email="bnzn@gmx.net" },
+]
+description = "Streamlit Milvus Connection"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache License 2.0",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/bsenst/st-milvus-connection"
+Issues = "https://github.com/bsenst/st-milvus-connection/issues"
