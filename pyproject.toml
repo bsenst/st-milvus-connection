@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "example_package_st_milvus_connection"
+name = "st_milvus_connection"
 version = "0.0.1"
 authors = [
   { name="bsenst", email="bnzn@gmx.net" },
@@ -11,6 +11,7 @@ authors = [
 description = "Streamlit Milvus Connection"
 readme = "README.md"
 requires-python = ">=3.8"
+dependencies = ["pymilvus", "streamlit"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",

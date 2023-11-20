@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from streamlit.connections import ExperimentalBaseConnection
 from streamlit.runtime.caching import cache_data
@@ -11,6 +12,8 @@ from pymilvus import (
 class MilvusConnection(ExperimentalBaseConnection[connections]):
     def _connect(self, **kwargs):
 
+        # The following code passage has been adapted from
+        # https://github.com/gerardrbentley/st-openai-embeddings-connection/blob/e440ff92ec8187a6bc17025c6f6c50c3e37ed108/src/st_openai_embeddings_connection/connection.py
         if "milvus_uri" in kwargs:
             milvus_uri = kwargs.pop("milvus_uri")
         elif "milvus_uri" in self._secrets:
