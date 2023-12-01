@@ -39,9 +39,6 @@ class MilvusConnection(BaseConnection[connections]):
     
     def list_collections(self) -> list:
         return utility.list_collections()
-
-    def count_entities(self, collection_name) -> int:
-        return Collection(collection_name).num_entities
     
     def get_collection(self, collection_name) -> Collection:
         return Collection(collection_name)

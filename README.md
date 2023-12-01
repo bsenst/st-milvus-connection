@@ -21,5 +21,5 @@ conn = st.connection("milvus", type=MilvusConnection)
 collections_list = conn.list_collections()
 
 for i, collection in enumerate(collections_list):
-    print(f"{i} {collection} contains {conn.count_entities(collection)} entities")
+    print(f"{i} {collection}")
 ```

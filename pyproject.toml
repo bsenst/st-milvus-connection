@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "st_milvus_connection"
-version = "0.0.2"
+version = "0.0.4"
 authors = [
   { name="bsenst", email="bnzn@gmx.net" },
 ]
 description = "Streamlit Milvus Connection"
 readme = "README.md"
-requires-python = ">=3.8"
-dependencies = ["pymilvus", "streamlit"]
+requires-python = ">=3.10"
+dependencies = ["pymilvus>=2.3.3", "streamlit>=1.29.0"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
