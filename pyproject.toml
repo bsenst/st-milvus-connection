@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "st_milvus_connection"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="bsenst", email="bnzn@gmx.net" },
 ]

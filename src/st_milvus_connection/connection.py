@@ -1,6 +1,6 @@
 import os
 import streamlit as st
-from streamlit.connections import ExperimentalBaseConnection
+from streamlit.connections import BaseConnection
 from streamlit.runtime.caching import cache_data
 
 from pymilvus import (
@@ -9,7 +9,7 @@ from pymilvus import (
     Collection
 )
 
-class MilvusConnection(ExperimentalBaseConnection[connections]):
+class MilvusConnection(BaseConnection[connections]):
     def _connect(self, **kwargs):
 
         # The following code passage has been adapted from
