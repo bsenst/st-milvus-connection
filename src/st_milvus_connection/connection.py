@@ -10,7 +10,7 @@ from pymilvus import (
 )
 
 class MilvusConnection(BaseConnection[connections]):
-    def _connect(self, **kwargs):
+    def _connect(self, **kwargs) -> connections:
 
         # The following code passage has been adapted from
         # https://github.com/gerardrbentley/st-openai-embeddings-connection/blob/e440ff92ec8187a6bc17025c6f6c50c3e37ed108/src/st_openai_embeddings_connection/connection.py
@@ -34,14 +34,14 @@ class MilvusConnection(BaseConnection[connections]):
         
         return connections.connect("default", uri=milvus_uri, token=milvus_token)
     
-    def has_collection(self, collection_name):
+    def has_collection(self, collection_name) -> bool:
         return utility.has_collection(collection_name)
     
-    def list_collections(self):
+    def list_collections(self) -> list:
         return utility.list_collections()
 
-    def count_entities(self, collection_name):
+    def count_entities(self, collection_name) -> int:
         return Collection(collection_name).num_entities
     
-    def get_collection(self, collection_name):
+    def get_collection(self, collection_name) -> Collection:
         return Collection(collection_name)
