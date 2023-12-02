@@ -1,12 +1,14 @@
 # st-milvus-connection
 Connect your streamlit app to milvus database.
 
-Install the library with:
+Install the library
+
 ```
 pip install st_milvus_connection
 ```
 
-Run the example script:
+Connect to Milvus database
+
 ```
 import os
 import streamlit as st
@@ -17,11 +19,12 @@ os.environ["milvus_uri"] = YOUR_MILVUS_ENDPOINT
 os.environ["milvus_token"] = YOUR_MILVUS_TOKEN
 
 conn = st.connection("milvus", type=MilvusConnection)
+```
 
-collections_list = conn.list_collections()
+List collections
 
-for i, collection in enumerate(collections_list):
-    print(f"{i} {collection}")
+```
+conn.list_collections()
 ```
 
 # Example Application
